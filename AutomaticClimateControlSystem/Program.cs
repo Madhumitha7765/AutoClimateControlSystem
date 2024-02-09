@@ -18,7 +18,7 @@ namespace AutoCimateControlSystem
             ECU ecu = new ECU(outsideTempSensor, peopleCountSensor, tempCalculator, tempRegulator);
 
             Logger.Log("Auto Climate Control System is running. ");
-            ecu.RunTemperatureControl();
+            ecu.RunTemperatureControl(false);
         }
     }
 }

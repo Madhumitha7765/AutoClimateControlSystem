@@ -27,19 +27,22 @@ namespace AutoCimateControlSystem
             this.tempRegulator = tempRegulator;
         }
 
-        public void RunTemperatureControl()
+        public void RunTemperatureControl(bool iteration)
         {
-            while (true)
+            do
             {
+
                 int outsideTemp = outsideTempSensor.GetOutsideTemp();
                 int peopleCount = peopleCountSensor.GetPeopleCount();
 
                 int newTemperature = tempCalculator.CalculateNewTemperature(peopleCount, outsideTemp);
-                currentTemp = newTemperature; 
+                currentTemp = newTemperature;
                 tempRegulator.RegulateTemperature(newTemperature);
 
                 Thread.Sleep(10000);
+
             }
+            while (iteration);
         }
 
         public int GetCurrentTemperature()

@@ -42,14 +42,11 @@ namespace AutoCimateControlSystem.Tests
             tempCalculatorMock.Setup(calculator => calculator.CalculateNewTemperature(10, 25)).Returns(27);
 
             // Act            
-            int iterations = 1;
-            for (int i = 0; i < iterations; i++)
-            {
-                ecu.RunTemperatureControl();
-            }
+            ecu.RunTemperatureControl(false);       
+
 
             // Assert
-            tempRegulatorMock.Verify(regulator => regulator.RegulateTemperature(27), Times.Exactly(iterations));
+            tempRegulatorMock.Verify(regulator => regulator.RegulateTemperature(27) , Times.Once);
         }
 
         [Test]
@@ -64,11 +61,9 @@ namespace AutoCimateControlSystem.Tests
             var ecu = new ECU(outsideTempSensorMock.Object, peopleCountSensorMock.Object,
                               tempCalculatorMock.Object, tempRegulatorMock.Object);
 
-            int iterations = 1;
-            for (int i = 0; i < iterations; i++)
-            {
-                ecu.RunTemperatureControl();
-            }
+           
+            ecu.RunTemperatureControl(false);
+            
 
             // Act
             int currentTemperature = ecu.GetCurrentTemperature();
