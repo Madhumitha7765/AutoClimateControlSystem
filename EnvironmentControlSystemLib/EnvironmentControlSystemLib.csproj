@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C4EC4552-7463-4B96-A2FD-7A068349326D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnvironmentControlSystem</RootNamespace>
+    <AssemblyName>EnvironmentControlSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ECU.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IOutsideTempLib\OutsideTemperatureContractsLib.csproj">
+      <Project>{6640f3c4-6b14-49e0-b5ed-a02ef7f8bc51}</Project>
+      <Name>OutsideTemperatureContractsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IPeopleCounterLib\PeopleCounterContractsLib.csproj">
+      <Project>{08a67f9f-c1ff-42c8-a400-5b33da73ce36}</Project>
+      <Name>PeopleCounterContractsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITempCalculatorLib\TemperatureCalculatorContractsLib.csproj">
+      <Project>{034ae0dc-e63d-422e-bcdf-7071787ae570}</Project>
+      <Name>TemperatureCalculatorContractsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ITempRegulatorLib\TemperatureRegulatorContractsLib.csproj">
+      <Project>{75cd9a69-4dd4-476b-a1b5-b58192d3958e}</Project>
+      <Name>TemperatureRegulatorContractsLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LoggerLib\LoggerLib.csproj">
+      <Project>{748b8cca-2ffe-4620-b6ed-2217c4f3bc58}</Project>
+      <Name>LoggerLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PeopleCounterLib\PeopleCounterLib.csproj">
+      <Project>{6229d542-a83a-45ce-a3a5-f9c40337fd83}</Project>
+      <Name>PeopleCounterLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TempRegulatorLib\TempRegulatorLib.csproj">
+      <Project>{d28234d4-fc96-4238-920b-41c6c3190f0b}</Project>
+      <Name>TempRegulatorLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
