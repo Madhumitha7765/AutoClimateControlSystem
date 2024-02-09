@@ -25,7 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironmentControlSystemLib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerLib", "LoggerLib\LoggerLib.csproj", "{748B8CCA-2FFE-4620-B6ED-2217C4F3BC58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnvironmentalControlSystemLib.test", "EnvironmentalControlSystemLib.test\EnvironmentalControlSystemLib.test.csproj", "{A1450080-BC9F-43A3-BF69-8C72BABAE4C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EnvironmentalControlSystemLib.test", "EnvironmentalControlSystemLib.test\EnvironmentalControlSystemLib.test.csproj", "{A1450080-BC9F-43A3-BF69-8C72BABAE4C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureCalculatorLib.Tests", "TemperatureCalculatorLib.Tests\TemperatureCalculatorLib.Tests.csproj", "{2142EB1C-BB1B-4C30-8FAA-B5C4EE46CBA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{A1450080-BC9F-43A3-BF69-8C72BABAE4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1450080-BC9F-43A3-BF69-8C72BABAE4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1450080-BC9F-43A3-BF69-8C72BABAE4C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2142EB1C-BB1B-4C30-8FAA-B5C4EE46CBA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2142EB1C-BB1B-4C30-8FAA-B5C4EE46CBA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2142EB1C-BB1B-4C30-8FAA-B5C4EE46CBA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2142EB1C-BB1B-4C30-8FAA-B5C4EE46CBA4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
